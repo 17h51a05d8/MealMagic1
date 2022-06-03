@@ -1,0 +1,11 @@
+pipeline{
+    agent any
+    stages{
+        stage('build'){
+            steps{
+                git branch: 'main', url: 'https://github.com/17h51a05d8/MealMagic1',
+                bat 'npm install'
+            }
+        }
+    }
+}
